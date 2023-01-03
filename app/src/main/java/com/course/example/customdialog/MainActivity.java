@@ -27,15 +27,14 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
 
                 //create custom dialog
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(MainActivity.this);
-                dialogBuilder.setView(R.layout.custom);
-                AlertDialog dialog = dialogBuilder.create();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setView(R.layout.custom);
 
                 //set title
-                dialog.setTitle("Lego Toy Corporation");
+                builder.setTitle("Lego Toy Corporation");
 
                 //set option buttons
-                dialogBuilder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         //whatever should be done when answering "YES" goes here
 
@@ -46,15 +45,15 @@ public class MainActivity extends Activity {
                     }
                 });//setPositiveButton
 
-                dialogBuilder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                builder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         //whatever should be done when answering "CANCEL" goes here
                         txtMsg.setText("Cancel");
                     }//OnClick
                 });//setNeutralButton
 
+                AlertDialog dialog = builder.create();
                 dialog.show();
-
 
                 txtMsg.setText("Hello");
 
