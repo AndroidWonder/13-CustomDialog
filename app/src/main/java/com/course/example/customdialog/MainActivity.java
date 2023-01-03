@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
                 dialog.setTitle("Lego Toy Corporation");
 
                 //set option buttons
-                dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Continue", new DialogInterface.OnClickListener() {
+                dialogBuilder.setPositiveButton("Continue", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         //whatever should be done when answering "YES" goes here
 
@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
                     }
                 });//setPositiveButton
 
-                dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Cancel", new DialogInterface.OnClickListener() {
+                dialogBuilder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         //whatever should be done when answering "CANCEL" goes here
                         txtMsg.setText("Cancel");
